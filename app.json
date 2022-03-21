@@ -2,13 +2,22 @@
   "expo": {
     "name": "household-chores-app",
     "slug": "household-chores-app",
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your household.",
+          "cameraPermission" : "The app accesses your camera to let you take photos and share them with your household."
+        }
+      ]
+    ],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#f6f6f6"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -20,6 +29,7 @@
       "supportsTablet": true
     },
     "android": {
+      "permissions" : ["READ_CALENDAR", "WRITE_CALENDAR", "CAMERA", "CAMERA_ROLL"],
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
